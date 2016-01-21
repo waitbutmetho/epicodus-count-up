@@ -1,14 +1,5 @@
-        //Examples
-        
-describe("leapYear", function(){
-  it("returns false for a year that is not divisible by 4, 100, or 400", function() {
-    expect(leapYear(1993)).to.equal("false");
-  });
-});
-
-
-describe("triangleTracker", function(){
-  it("return equilateral if all sides are equal", function() {
-    expect(triangleTracker(2, 2, 2)).to.equal("equilateral");
+describe("countUp", function(){
+  it("counts by the first input to the second input", function() {
+    expect(countUp(5, 30)).to.eql([5, 10, 15, 20, 25, 30]);
   });
 });
