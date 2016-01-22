@@ -1,10 +1,20 @@
 // Example document ready function and form submit function w/ event handler to prevent default
 var countUp = function(firstNumber, secondNumber) {
   var outputArray = [];
-  for (var index = firstNumber; index <= secondNumber; index += firstNumber) {
-    outputArray.push(index);
+  if (firstNumber < 0 && secondNumber < 0) {
+    for (var index = firstNumber; index >= secondNumber; index += firstNumber) {
+      outputArray.push(index);
+    }
+    return outputArray;
+  } else if (firstNumber < 0 && secondNumber > 0 || firstNumber > 0 && secondNumber < 0) {
+    alert("You cannot have one negative and one positive")
+    return "You cannot have one negative and one positive";
+  } else {
+    for (var index = firstNumber; index <= secondNumber; index += firstNumber) {
+      outputArray.push(index);
+    }
+    return outputArray;
   }
-  return outputArray;
 };
 
 
